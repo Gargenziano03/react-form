@@ -24,6 +24,14 @@ export default function AppMain() {
 
         setNewArticoli('')
     }
+
+    function handleTrashArticolo(e) {
+        const articoloIndex = Number(e.target.getAttribute('data-index'))
+        const newArticoli = articoli.filter((articolo, index) => index != articoloIndex)
+        console.log(articoloIndex);
+        setArticoli(newArticoli)
+
+    }
     return (
         <main>
             <div className="container">
@@ -40,8 +48,13 @@ export default function AppMain() {
                     </div>
                 </form>
 
-                <ul className="list-articoli">
-                    {articoli.map((articolo, index) => <li key={index} className="list-articoli-item">{articolo}</li>)}
+                <ul className="list-group">
+                    {articoli.map((articolo, index) => <li key={index} className="list-group-item d-flex justify-content-between">
+                        {articolo}
+                        <button onClick={handleTrashArticolo} data-index={index} className="btn btn-danger">
+                            <i className="bi bi-trash "></i>
+                        </button>
+                    </li>)}
                 </ul>
             </div>
         </main>
