@@ -1,5 +1,17 @@
 import { useState } from "react";
 export default function AppMain() {
+    const Articolo = [
+        "Novità iOS 17",
+        "Ottimizzare il PC",
+        "Futuro dell'IA",
+        "App per Smart Working",
+        "Tendenze Tech 2024",
+        "Sicurezza Online",
+        "Gadget dell'Anno",
+        "Smart Home Facile",
+        "Proteggi i Dati",
+        "Impatto del 5G"
+    ];
     return (
         <main>
             <div className="container">
