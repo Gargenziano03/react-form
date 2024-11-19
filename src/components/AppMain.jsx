@@ -48,6 +48,7 @@ export default function AppMain() {
                     </div>
                 </form>
 
+
                 <ul className="list-group">
                     {articoli.map((articolo, index) => <li key={index} className="list-group-item d-flex justify-content-between">
                         {articolo}
